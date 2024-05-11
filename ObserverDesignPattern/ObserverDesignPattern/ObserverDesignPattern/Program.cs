@@ -18,3 +18,6 @@ _ledtv.add(_sms);
 
 _iphone.setData(5);
 _ledtv.setData(6);
+
+_iphone.setData(10);
+_ledtv.setData(16);
