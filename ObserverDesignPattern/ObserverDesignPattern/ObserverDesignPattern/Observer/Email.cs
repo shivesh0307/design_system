@@ -9,6 +9,10 @@ namespace ObserverDesignPattern.Observer
 {
     public class Email : Observer
     {
+        String _email;
+        public Email(String email) {
+            _email = email;
+        }
         public override void update(IObservable observable)
         {
             String itemName = base.findItem(observable);
@@ -17,7 +21,7 @@ namespace ObserverDesignPattern.Observer
         }
         public void SendEmail(String itemName)
         {
-            Console.WriteLine($"Email sent for {itemName}");
+            Console.WriteLine($"Email sent for {itemName} to {_email}");
         }
     }
 }

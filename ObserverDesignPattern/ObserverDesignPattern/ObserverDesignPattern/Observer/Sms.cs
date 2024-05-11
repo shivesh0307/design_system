@@ -9,8 +9,10 @@ namespace ObserverDesignPattern.Observer
 {
     public class SMS : Observer
     {
-        public SMS() 
-        { 
+        string _smsNumber; 
+        public SMS(string smsNumber) 
+        {
+            _smsNumber = smsNumber;
         }
 
         public override void update(IObservable observable)
@@ -20,7 +22,7 @@ namespace ObserverDesignPattern.Observer
             SendSMS(itemName);
         }
         public void SendSMS(String itemName) {
-            Console.WriteLine($"SMS sent for {itemName}");
+            Console.WriteLine($"SMS sent for {itemName} to {_smsNumber}");
         }
     }
 }
